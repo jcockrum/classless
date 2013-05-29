@@ -1,0 +1,8 @@
+class Character < ActiveRecord::Base
+  belongs_to :user
+  attr_accessible :age, :eyes, :hair, :height, :name, :race, :sex, :weight, :basestat_attributes
+    
+  has_one :basestat
+  accepts_nested_attributes_for :basestat, allow_destroy: true
+  
+end

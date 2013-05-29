@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130529064912) do
+ActiveRecord::Schema.define(:version => 20130529113319) do
 
   create_table "characters", :force => true do |t|
     t.string   "name"
@@ -22,9 +22,19 @@ ActiveRecord::Schema.define(:version => 20130529064912) do
     t.string   "weight"
     t.string   "eyes"
     t.string   "hair"
+    t.integer  "strength"
+    t.integer  "dexterity"
+    t.integer  "constitution"
+    t.integer  "intelligence"
+    t.integer  "wisdom"
+    t.integer  "charisma"
+    t.integer  "skills"
+    t.integer  "feats"
+    t.integer  "hitpoints"
+    t.integer  "hithdice"
     t.integer  "user_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   add_index "characters", ["user_id"], :name => "index_characters_on_user_id"

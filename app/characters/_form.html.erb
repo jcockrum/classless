@@ -1,0 +1,28 @@
+<%= simple_nested_form_for @character, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :name %>
+  <%= f.input :race %>
+  <%= f.input :age %>
+  <%= f.input :sex %>
+  <%= f.input :height %>
+  <%= f.input :weight %>
+  <%= f.input :eyes, collection: ["Hazel", "Brown", "Blue", "Green", "Gray", "Amber", "Red", "Violet"] %>
+  <%= f.input :hair, collection: ["Black", "Brown", "Blond", "Auburn", "Chestnut", "Red", "Gray", "White"] %>
+  
+  <fieldset>
+    <legend> Statistics </legend>
+    <%= f.fields_for :basestat, :wrapper => false do |f| %>
+      <%= f.input  :strength, collection: 3..18 %>  
+      <%= f.input  :dexterity, collection: 3..18 %>
+      <%= f.input  :constitution, collection: 3..18 %>   
+      <%= f.input  :intelligence, collection: 3..18 %>   
+      <%= f.input  :wisdom, collection: 3..18 %>   
+      <%= f.input  :charisma, collection: 3..18 %>
+    <% end %>
+</fieldset>
+  
+  <div class="form-actions">
+    <%= f.button :submit, :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                characters_path, :class => 'btn' %>
+  </div>
+<% end %>

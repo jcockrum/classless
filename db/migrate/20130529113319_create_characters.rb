@@ -9,6 +9,16 @@ class CreateCharacters < ActiveRecord::Migration
       t.string :weight
       t.string :eyes
       t.string :hair
+      t.integer :strength
+      t.integer :dexterity
+      t.integer :constitution
+      t.integer :intelligence
+      t.integer :wisdom
+      t.integer :charisma
+      t.integer :skills
+      t.integer :feats
+      t.integer :hitpoints
+      t.integer :hithdice
       t.references :user
 
       t.timestamps

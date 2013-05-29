@@ -1,0 +1,5 @@
+# Base App 
+rails new classless -m https://raw.github.com/RailsApps/rails-composer/master/composer.rb
+
+# Universe routes
+rails g scaffold character name:string race:string age:string sex:string height:string weight:string eyes:string hair:string user:references;

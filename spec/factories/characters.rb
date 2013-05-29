@@ -16,6 +16,8 @@ FactoryGirl.define do
     intelligence 1
     wisdom 1
     charisma 1
+    experence 1
+    level 1
     skills 1
     feats 1
     hitpoints 1

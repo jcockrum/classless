@@ -5,54 +5,16 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:name) %></th>
-      <th><%= model_class.human_attribute_name(:race) %></th>
-      <th><%= model_class.human_attribute_name(:age) %></th>
-      <th><%= model_class.human_attribute_name(:sex) %></th>
-      <th><%= model_class.human_attribute_name(:height) %></th>
-      <th><%= model_class.human_attribute_name(:weight) %></th>
-      <th><%= model_class.human_attribute_name(:eyes) %></th>
-      <th><%= model_class.human_attribute_name(:hair) %></th>
-      <th><%= model_class.human_attribute_name(:strength) %></th>
-      <th><%= model_class.human_attribute_name(:dexterity) %></th>
-      <th><%= model_class.human_attribute_name(:constitution) %></th>
-      <th><%= model_class.human_attribute_name(:intelligence) %></th>
-      <th><%= model_class.human_attribute_name(:wisdom) %></th>
-      <th><%= model_class.human_attribute_name(:charisma) %></th>
-      <th><%= model_class.human_attribute_name(:skills) %></th>
-      <th><%= model_class.human_attribute_name(:feats) %></th>
-      <th><%= model_class.human_attribute_name(:hitpoints) %></th>
-      <th><%= model_class.human_attribute_name(:hithdice) %></th>
-      <th><%= model_class.human_attribute_name(:user_id) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%= model_class.human_attribute_name(:level) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
     <% @characters.each do |character| %>
       <tr>
-        <td><%= link_to character.id, character_path(character) %></td>
-        <td><%= character.name %></td>
-        <td><%= character.race %></td>
-        <td><%= character.age %></td>
-        <td><%= character.sex %></td>
-        <td><%= character.height %></td>
-        <td><%= character.weight %></td>
-        <td><%= character.eyes %></td>
-        <td><%= character.hair %></td>
-        <td><%= character.strength %></td>
-        <td><%= character.dexterity %></td>
-        <td><%= character.constitution %></td>
-        <td><%= character.intelligence %></td>
-        <td><%= character.wisdom %></td>
-        <td><%= character.charisma %></td>
-        <td><%= character.skills %></td>
-        <td><%= character.feats %></td>
-        <td><%= character.hitpoints %></td>
-        <td><%= character.hithdice %></td>
-        <td><%= character.user_id %></td>
-        <td><%=l character.created_at %></td>
+        <td><%= link_to character.name, character_path(character) %></td>
+        <td><%= character.level %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_character_path(character), :class => 'btn btn-mini' %>

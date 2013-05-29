@@ -32,6 +32,10 @@
   <dd><%= @character.wisdom %></dd>
   <dt><strong><%= model_class.human_attribute_name(:charisma) %>:</strong></dt>
   <dd><%= @character.charisma %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:experence) %>:</strong></dt>
+  <dd><%= @character.experence %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:level) %>:</strong></dt>
+  <dd><%= @character.level %></dd>
   <dt><strong><%= model_class.human_attribute_name(:skills) %>:</strong></dt>
   <dd><%= @character.skills %></dd>
   <dt><strong><%= model_class.human_attribute_name(:feats) %>:</strong></dt>
@@ -40,8 +44,6 @@
   <dd><%= @character.hitpoints %></dd>
   <dt><strong><%= model_class.human_attribute_name(:hithdice) %>:</strong></dt>
   <dd><%= @character.hithdice %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:user_id) %>:</strong></dt>
-  <dd><%= @character.user_id %></dd>
 </dl>
 
 <div class="form-actions">

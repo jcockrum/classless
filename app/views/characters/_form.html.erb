@@ -2,9 +2,9 @@
 
 <fieldset>
     <%= f.input :name %>
-    <%= f.input :race %>
-    <%= f.input :age %>
     <%= f.input :sex, collection: ["Male", "Female"] %>
+    <%= f.input :race, collection: ["Dwarf", "Elf", "Gnome", "Halfling", "Human", "Half Elf", "Half Orc"]%>
+    <%= f.input :age %>
     <%= f.input :height %>
     <%= f.input :weight %>
     <%= f.input :eyes, collection: ["Hazel", "Brown", "Blue", "Green", "Gray", "Amber", "Red", "Violet"] %>

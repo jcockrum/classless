@@ -3,48 +3,63 @@
   <h1><%=t '.title', :default => model_class.model_name.human %></h1>
 </div>
 
-<dl class="dl-horizontal">
-  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
-  <dd><%= @character.name %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:race) %>:</strong></dt>
-  <dd><%= @character.race %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:age) %>:</strong></dt>
-  <dd><%= @character.age %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:sex) %>:</strong></dt>
-  <dd><%= @character.sex %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:height) %>:</strong></dt>
-  <dd><%= @character.height %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:weight) %>:</strong></dt>
-  <dd><%= @character.weight %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:eyes) %>:</strong></dt>
-  <dd><%= @character.eyes %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:hair) %>:</strong></dt>
-  <dd><%= @character.hair %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:strength) %>:</strong></dt>
-  <dd><%= @character.strength %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:dexterity) %>:</strong></dt>
-  <dd><%= @character.dexterity %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:constitution) %>:</strong></dt>
-  <dd><%= @character.constitution %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:intelligence) %>:</strong></dt>
-  <dd><%= @character.intelligence %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:wisdom) %>:</strong></dt>
-  <dd><%= @character.wisdom %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:charisma) %>:</strong></dt>
-  <dd><%= @character.charisma %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:experence) %>:</strong></dt>
-  <dd><%= @character.experence %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:level) %>:</strong></dt>
-  <dd><%= @character.level %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:skills) %>:</strong></dt>
-  <dd><%= @character.skills %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:feats) %>:</strong></dt>
-  <dd><%= @character.feats %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:hitpoints) %>:</strong></dt>
-  <dd><%= @character.hitpoints %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:hithdice) %>:</strong></dt>
-  <dd><%= @character.hithdice %></dd>
-</dl>
+<div class="row-fluid">
+            <div class="span4">
+              <h3>Description</h3>
+                <ul class="unstyled">
+                    <li><strong><%= model_class.human_attribute_name(:name) %>:</strong>
+                    <%= @character.name %></li>
+                    <li><strong><%= model_class.human_attribute_name(:sex) %>:</strong>
+                    <%= @character.sex %></li>
+                    <li><strong><%= model_class.human_attribute_name(:race) %>:</strong>
+                    <%= @character.race %></li>
+                    <li><strong><%= model_class.human_attribute_name(:height) %>:</strong>
+                    <%= @character.height %></li>
+                    <li><strong><%= model_class.human_attribute_name(:weight) %>:</strong>
+                    <%= @character.weight %></li>
+                    <li><strong><%= model_class.human_attribute_name(:eyes) %>:</strong>
+                    <%= @character.eyes %></li>
+                    <li><strong><%= model_class.human_attribute_name(:hair) %>:</strong>
+                    <%= @character.hair %></li>
+                </ul>
+              
+            </div><!--/span-->
+            <div class="span4">
+              <h3>Atributes</h3>
+                 <ul class="unstyled">
+                    <li><strong><%= model_class.human_attribute_name(:strength) %>:</strong>
+                    <%= @character.strength %></li>
+                    <li><strong><%= model_class.human_attribute_name(:dexterity) %>:</strong>
+                    <%= @character.dexterity %></li>
+                    <li><strong><%= model_class.human_attribute_name(:constitution) %>:</strong>
+                    <%= @character.constitution %></li>
+                    <li><strong><%= model_class.human_attribute_name(:intelligence) %>:</strong>
+                    <%= @character.intelligence %></li>
+                    <li><strong><%= model_class.human_attribute_name(:wisdom) %>:</strong>
+                    <%= @character.wisdom %></li>
+                    <li><strong><%= model_class.human_attribute_name(:charisma) %>:</strong>
+                    <%= @character.charisma %></li>
+                    
+                </ul>
+            </div><!--/span-->
+            <div class="span4">
+              <h3>Stats</h3>
+                 <ul class="unstyled">
+                    <li><strong><%= model_class.human_attribute_name(:experence) %>:</strong>
+                    <%= @character.experence %></li>
+                    <li><strong><%= model_class.human_attribute_name(:level) %>:</strong>
+                    <%= @character.level %></li>
+                    <li><strong><%= model_class.human_attribute_name(:skills) %>:</strong>
+                    <%= @character.skills %></li>
+                    <li><strong><%= model_class.human_attribute_name(:feats) %>:</strong>
+                    <%= @character.feats %></li>
+                    <li><strong><%= model_class.human_attribute_name(:hitpoints) %>:</strong>
+                    <%= @character.hitpoints %></li>
+                    <li><strong><%= model_class.human_attribute_name(:hithdice) %>:</strong>
+                    <%= @character.hithdice %></li>
+                </ul>
+            </div><!--/span-->
+          </div><!--/row-->
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),

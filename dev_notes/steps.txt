@@ -1,101 +1,80 @@
-Set a name and Choose a Race
+--------Start--------
+>>> set base Game <<<
+>>set historical, modern, future
+>>set scores genrate type : roll or point buy [10, 15, 20, 25]
+**if point buy => setup counters (base-used)
+** atrib_costs [7  –4, 8 –2, 9 –1, 10  0, 11  1, 12  2, 13  3, 14  5, 15  7, 16  10, 17  13, 18  17]
 
-Table: Race and Ability Score Bonuses
-Race	Ability Bonus
-Dwarf	+2 Con, +2 Wis, –2 Cha
-Elf	+2 Dex, +2 Int, –2 Con
-Gnome	+2 Con, +2 Cha, –2 Str
-Half Elf	+2 to one ability score (your choice)
-Halfling	+2 Dex, +2 Cha, –2 Str
-Half Orc	+2 to one ability score (your choice)
-Human	+2 to one ability score (your choice)
+>>>>set starting factors<<<<< 
+**set skills_counters (base-used,cost)
+**set skills_base=8, skills_used=0, skills_cost=0
+**set traning_counters (base-used)
+**set skill_costs ( rate1=.3, rate2=.5, rate3=.75, rate4=1)
+**set skill_level=rate1
+**set skill_train=0
+**set flaws=0
+**set feats counters (base-used)
+**set feats base=12, used=0
+**set languages
+**set lagua
+**set xp=0
+**set base HD (4,6,8,10)
+**set base HP (4,6,8,10)
+**set fortitude, reflex, will, initiative, base_attack_bonus, ranged_base_attack_bonus, EF = 0
 
-Description & Personality
-Age:
-Human	15 years	+1d6
-Dwarf	40 years	+3d6
-Elf	110 years	+4d6	
-Gnome	40 years	+4d6
-Half-elf	20 years	+1d6
-Half-orc	14 years	+2d4
-Halfling	20 years	+2d4
+--------new page--------
+D> Enter scores
 
+--------new page--------
+Set a name and choose a Race
+A> Enter name, sex, hair and eyes
 
-Table: Random Height and Weight
-Race	Base Height	Base Weight	Modifier	Weight Multiplier
-Human, male	4 ft. 10 in.	120 lbs.	2d10	×5 lbs.
-Human, female	4 ft. 5 in.	85 lbs.	2d10	×5 lbs.
-Dwarf, male	3 ft. 9 in.	150 lbs.	2d4	×7 lbs.
-Dwarf, female	3 ft. 7 in.	120 lbs.	2d4	×7 lbs.
-Elf, male	5 ft. 4 in.	100 lbs.	2d8	×3 lbs.
-Elf, female	5 ft. 4 in.	90 lbs.	2d6	×3 lbs.
-Gnome, male	3 ft. 0 in.	35 lbs.	2d4	×1 lb.
-Gnome, female	2 ft. 10 in.	30 lbs.	2d4	×1 lb.
-Half-elf, male	5 ft. 2 in.	110 lbs.	2d8	×5 lbs.
-Half-elf, female	5 ft. 0 in.	90 lbs.	2d8	×5 lbs.
-Half-orc, male	4 ft. 10 in.	150 lbs.	2d12	×7 lbs.
-Half-orc, female	4 ft. 5 in.	110 lbs.	2d12	×7 lbs.
-Halfling, male	2 ft. 8 in.	30 lbs.	2d4	×1 lb.
-Halfling, female	2 ft. 6 in.	25 lbs.	2d4	×1 lb.
+B> select Race
+>> set lang_known[]
+>> set race_atrb_mod+int_mod
+  [
+    [Dwarf +2 Con, +2 Wis, –2 Cha],
+    [Elf +2 Dex, +2 Int, –2 Con],
+    [Gnome +2 Con, +2 Cha, –2 Str],
+    [Halfling  +2 Dex, +2 Cha, –2 Str],
+    [Half Elf  +2 to one ability score (your choice)],
+    [Half Orc  +2 to one ability score (your choice)],
+    [Human +2 to one ability score (your choice)]
+  ]
+>> set age, height, weight, laguages arrays
 
+--------new page--------
+C> enter age, height, weight
 
+    
+--------new page--------
+add/chose flaws
+** each flaw adds 1 to feats base
 
-
-
-Determine Ability Scores
-
-    Roll your scores randomly using the Standard (4d6) OR
-    Point Buy: the costs of purchasing ability scores.
-
-    Table: Ability Score Points
-    Campaign Type	Points
-    Low Fantasy	10
-    Standard Fantasy	15
-    High Fantasy	20
-    Epic Fantasy	25
-
-
-    Table: Ability Score Costs
-    Score	Points
-    7	–4
-    8	–2
-    9	–1
-    10	0
-    11	1
-    12	2
-    13	3
-    14	5
-    15	7
-    16	10
-    17	13
-    18	17
-
-Allocate Skill Ranks
+--------new page--------
 Choose Feats
-Get Equipped
+
+** calculate skill_base (base+int_mod+sp_feat)
+** calculate skill_train (each Skill_Training_feat skill_train += 15 )
+
+--------new page--------
+Spend Skill_train_points skill(rate)
+Spend skill_points level+3*rate
+
+--------new page--------
+Get Equipped (Armor && Weapons)
  
-    Table: Character Wealth by Level
-    PC Level	Wealth
-    1   5d6 × 10 gp
-    2	1,000 gp
-    3	3,000 gp
-    4	6,000 gp
-    5	10,500 gp
-    6	16,000 gp
-    7	23,500 gp
-    8	33,000 gp
-    9	46,000 gp
-    10	62,000 gp
-    11	82,000 gp
-    12	108,000 gp
-    13	140,000 gp
-    14	185,000 gp
-    15	240,000 gp
-    16	315,000 gp
-    17	410,000 gp
-    18	530,000 gp
-    19	685,000 gp
-    20	880,000 gp
 
-Review Saving Throws, AC, Initiative, and Attack Values
+>> Calculate 
+   fortitude (fort_skill+con_mod)
+   reflex (ref_skill+dex_mod)
+   will (will_skill+wis_mod)
+   initiative (imp_init_feat+dex_mod)
+   base_attack_bonus (ba_skill+str_mod)
+   ranged_base_attack_bonus (ba_skill+dex_mod)
+    
+--------show page--------
+Final review
 
+
+--------end--------

@@ -1,5 +1,8 @@
 fantasy
 
+name, description, abilityplus, abilityminus, size, species, genus, speed, languages, senses, 
+defensive, offensive, addskill, addfeat, spellabilities
+
 "Dwarf", "Elf", "Gnome", "Halfling", "Human", "Half Elf", "Half Orc"
 
 name: Dwarf
@@ -24,28 +27,28 @@ name: Human
 description: Ambitious, sometimes heroic, and always confident, humans have an ability to work together toward common goals that makes them a force to be reckoned with. Though short-lived compared to other races, their boundless energy and drive allow them to accomplish much in their brief lifetimes.
 
 
-name, abilityplus, abilityminus, size, species, (genus), speed, languages, senses, 
+name, abilityplus, abilityminus, size, species, genus, speed, languages, senses, 
 defensivetraits, offensivetraits, skillbonuses, featbonuses, spellabilities
 
-Dwarf, [Constitution, Wisdom], Charisma, Medium, Humanoid, (dwarf), 20ft., [Common, Dwarven], Darkvision-60ft.,
+Dwarf, [Constitution, Wisdom], Charisma, Medium, Humanoid, dwarf, 20ft., [Common, Dwarven], Darkvision-60ft.,
  [AC bonus, Saving Throw bonus], [Attack bonus, weapon familiarity], [Appraise, Perception], -, -, #
 
-Elf, [Dexterity, Intelligence], Constitution, Medium, Humanoid, (elf), 30ft., [Common, Elven], Low-light vision,
+Elf, [Dexterity, Intelligence], Constitution, Medium, Humanoid, elf, 30ft., [Common, Elven], Low-light vision,
  Elven immunities, Weapon familiarity, Perception, -, -, #
 
-Gnome, [Constitution, Charisma], Strength, Small, Humanoid, (gnome), 20ft., Common, [Gnome, Sylvan], Low-light vision,
+Gnome, [Constitution, Charisma], Strength, Small, Humanoid, gnome, 20ft., Common, [Gnome, Sylvan], Low-light vision,
  Defensive, training, illusion, resistance, Hatred, weapon familiarity, [Perception, Craft or Profession], -, [dancing, lights, ghost, sound, prestidigitation], #
 
-Half-elf, one, None, Medium, Humanoid, (elf, human), 30ft., Common, Elven, Low-light vision,
+Half-elf, one, None, Medium, Humanoid, [elf, human], 30ft., Common, Elven, Low-light vision,
  Elven, immunities, -, [Perception, Skill Focus], -, #
 
-Halfling, [Dexterity, Charisma], Strength, Small, Humanoid, (halfling), 20, ft., [Common, Halfling], -, [Fearless, halfling luck],
+Halfling, [Dexterity, Charisma], Strength, Small, Humanoid, halfling, 20, ft., [Common, Halfling], -, [Fearless, halfling luck],
  Weapon familiarity, [Perception, Acrobatics, Climb], -, -, #
 
-Half-orc, one, None, Medium, Humanoid, (human, orc), 30ft., [Common, Orc], Darkvision,
+Half-orc, one, None, Medium, Humanoid, [human, orc], 30ft., [Common, Orc], Darkvision,
  -, Orc ferocity, weapon familiarity, Intimidate, -, -, #
 
-Human, one, None, Medium, Humanoid, (human), 30, ft., Common, -,
+Human, one, None, Medium, Humanoid, [human], 30, ft., Common, -,
  -, -, -, Any one, -, #
 
 

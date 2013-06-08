@@ -1,10 +1,12 @@
 # Base App 
 rails new classless -m https://raw.github.com/RailsApps/rails-composer/master/composer.rb
 
-# Universe routes
-rails g scaffold character name:string race:string age:string sex:string height:string weight:string eyes:string hair:string strength:integer dexterity:integer constitution:integer intelligence:integer wisdom:integer charisma:integer experence:integer level:integer skills:integer feats:integer hitpoints:integer hithdice:integer user:references --skip-stylesheets;
+rails g scaffold character sex:string name:string age:string height:string weight:string eyes:string hair:string  user:references --skip-stylesheets;
 
 rails g bootstrap:themed characters -f;
 
+rails g race name, description:text, abilityplus:string, abilityminus:string, size:string, species:string, genus:string, speed:integer, languages:string, senses:string, defensive:string, offensive:string, addskill:string, addfeat:string, spellabilities:string character:references;
 
+rails g atribute strength:integer dexterity:integer constitution:integer intelligence:integer wisdom:integer charisma:integer character:references;
 
+rails g stat experence:integer level:integer skills:integer feats:integer hitpoints:integer hithdice:integer character:references;
